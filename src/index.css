@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0a0a0c;
+  --color-ink-2: #131217;
+  --color-ink-3: #1b1a20;
+  --color-ink-4: #26242c;
+
+  --color-paper: #f3f1ec;
+  --color-mist: #9d9aa4;
+  --color-mist-dim: #8a8792;
+
+  /* Accent comes straight from the logo: aperture yellow + REC red. */
+  --color-amber: #ffd400;
+  --color-amber-strong: #ffe14a;
+  --color-amber-dim: rgba(255, 212, 0, 0.12);
+  --color-amber-ink: #141100;
+
+  --color-state-done: #3fb87a;
+  --color-state-posted: #4c8bf0;
+  /* Reserved for REC / live only. */
+  --color-state-live: #ff3b4e;
+
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* Archivo carries the display voice slightly expanded, like broadcast lettering. */
+.font-display {
+  font-stretch: 112%;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-amber-ink);
+}
+
+html {
+  color-scheme: dark;
+  scrollbar-color: var(--color-ink-4) var(--color-ink);
+  accent-color: var(--color-amber);
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  caret-color: var(--color-amber);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
