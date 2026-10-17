@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { ArrowUpRightIcon } from '@phosphor-icons/react'
 
-export const APP_URL = 'https://captura-checklist.onrender.com'
+export const APP_URL = 'https://app.captura-checklist.com.br'
 
 const SIZES = {
   sm: 'px-5 py-2.5',
