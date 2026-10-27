@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/privacidade.html",
+      "destination": "https://app.captura-checklist.com.br/privacidade.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacidade",
+      "destination": "https://app.captura-checklist.com.br/privacidade.html",
+      "permanent": true
+    }
+  ]
+}
